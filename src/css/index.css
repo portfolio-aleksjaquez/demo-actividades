@@ -1,0 +1,283 @@
+.home {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px 40px;
+}
+
+.hero {
+  position: relative;
+  padding: 40px 0 44px;
+}
+.hero-text {
+  max-width: 780px;
+  animation: float-in 0.6s ease-out both;
+}
+.sample-stamp {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--rosa);
+  border: 3px solid var(--rosa);
+  border-radius: 10px;
+  padding: 4px 12px 2px;
+  transform: rotate(-4deg);
+  margin-bottom: 18px;
+  background: rgba(255, 253, 247, 0.85);
+}
+.hero h1 {
+  font-size: clamp(2.6rem, 6.4vw, 5rem);
+  line-height: 0.98;
+}
+.hero-dot {
+  color: var(--monarca);
+}
+.hero-demo {
+  position: relative;
+  display: inline-block;
+  padding: 0 0.18em;
+  color: var(--white);
+  z-index: 0;
+}
+.hero-demo::before {
+  content: '';
+  position: absolute;
+  inset: 0.12em -0.02em 0 -0.02em;
+  background: var(--agua);
+  border: 4px solid var(--ink);
+  border-radius: 0.24em;
+  box-shadow: 5px 6px 0 var(--ink);
+  transform: rotate(-2.5deg);
+  z-index: -1;
+}
+.lead {
+  margin-top: 22px;
+  font-size: 1.25rem;
+  max-width: 60ch;
+  color: var(--ink-soft);
+}
+
+.hero-doodles .doodle {
+  position: absolute;
+  animation: bob 5s ease-in-out infinite;
+}
+.d1 { width: 64px; right: 9%; top: 30px; }
+.d2 { width: 58px; right: 22%; top: 150px; animation-delay: -1.2s; }
+.d3 { width: 110px; right: 4%; top: 190px; animation-delay: -2.4s; }
+.d4 { width: 72px; right: 33%; top: 28px; animation-delay: -3.1s; }
+@keyframes bob {
+  50% { translate: 0 -10px; rotate: 6deg; }
+}
+
+.act-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+.act-card {
+  animation: float-in 0.6s ease-out both;
+}
+.act-card:nth-child(1) { rotate: -1deg; animation-delay: 0.08s; }
+.act-card:nth-child(2) { rotate: 0.8deg; animation-delay: 0.16s; margin-top: 18px; }
+.act-card:nth-child(3) { rotate: -0.6deg; animation-delay: 0.24s; }
+
+.act-card a {
+  position: relative;
+  display: grid;
+  gap: 8px;
+  height: 100%;
+  padding: 14px 14px 20px;
+  text-decoration: none;
+  border: 3px solid var(--ink);
+  border-radius: 24px;
+  background: var(--white);
+  box-shadow: 6px 7px 0 var(--ink);
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.act-card a::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  width: 96px;
+  height: 28px;
+  transform: translateX(-50%) rotate(2deg);
+  background: color-mix(in srgb, var(--accent) 50%, transparent);
+  border-radius: 3px;
+  z-index: 2;
+}
+.act-card a:hover {
+  transform: translateY(-5px) rotate(0.6deg);
+  box-shadow: 9px 12px 0 var(--ink);
+}
+.act-card a:focus-visible {
+  outline-offset: 6px;
+  border-radius: 24px;
+}
+.act-cover {
+  display: block;
+  border-radius: 16px;
+  border: 3px solid var(--ink);
+  background:
+    radial-gradient(circle at 85% 20%, rgba(255, 255, 255, 0.7), transparent 40%),
+    var(--accent-soft);
+  aspect-ratio: 24 / 17;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.act-cover.is-night {
+  background:
+    radial-gradient(circle at 20% 15%, rgba(120, 150, 255, 0.35), transparent 45%),
+    #1b2550;
+}
+.act-cover svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.3, 1.2);
+}
+.act-card a:hover .act-cover svg {
+  transform: scale(1.06) rotate(-1.5deg);
+}
+.act-type {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: #fff;
+  background: var(--accent);
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  padding: 3px 12px 2px 8px;
+}
+.act-type svg {
+  width: 18px;
+  height: 18px;
+}
+.act-card h2 {
+  font-size: 1.55rem;
+  padding: 0 4px;
+}
+.act-meta {
+  font-weight: 700;
+  color: var(--accent-deep);
+  padding: 0 4px;
+  font-size: 0.95rem;
+}
+.act-desc {
+  color: var(--ink-soft);
+  padding: 0 4px;
+}
+.act-go {
+  justify-self: start;
+  margin: 8px 4px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.1rem;
+  padding: 8px 18px;
+  border-radius: 14px;
+  border: 3px solid var(--ink);
+  background: var(--sol);
+  box-shadow: 0 4px 0 var(--ink);
+}
+.act-go svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s;
+}
+.act-card a:hover .act-go svg {
+  transform: translateX(4px);
+}
+
+.features {
+  margin-top: 56px;
+}
+.features ul {
+  list-style: none;
+  margin: 0;
+  padding: 22px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  border: 3px dashed rgba(31, 42, 68, 0.3);
+  border-radius: 24px;
+  background: rgba(255, 253, 247, 0.7);
+}
+.features li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.features svg {
+  flex: none;
+  width: 40px;
+  height: 40px;
+}
+.features strong {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.05rem;
+  margin-bottom: 2px;
+}
+.features p {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+.home-footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 24px 36px;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1000px) {
+  .act-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .features ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 700px) {
+  .home {
+    padding: 4px 16px 24px;
+  }
+  .hero {
+    padding: 22px 0 30px;
+  }
+  .lead {
+    font-size: 1.1rem;
+  }
+  .act-list {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+  .act-card:nth-child(2) {
+    margin-top: 0;
+  }
+  .features ul {
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+  .d2, .d3 { display: none; }
+  .d1 { top: 6px; right: 4px; width: 46px; }
+  .d4 { top: 8px; right: 70px; width: 50px; }
+  .home-footer { padding: 6px 16px 28px; }
+}
+@media (max-width: 480px) {
+  .hero-dot { display: none; }
+}

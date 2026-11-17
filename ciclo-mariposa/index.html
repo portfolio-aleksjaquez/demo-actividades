@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Actividad interactiva: ordena las etapas del ciclo de vida de la mariposa monarca." />
+    <meta name="theme-color" content="#fbf6ea" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>Ciclo de vida de la mariposa monarca · Actividades interactivas</title>
+  </head>
+  <body class="theme-monarca">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="topbar">
+      <a class="brand" href="../" aria-label="Volver a todas las actividades">
+        <span class="brand-mark"><svg class="back-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5L8 12l6.5 6.5" fill="none" stroke="#1F2A44" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand-label">Todas las actividades</span>
+      </a>
+      <span class="topbar-spacer"></span>
+      <span class="sample-tag">Contenido de ejemplo</span>
+      <button class="sound-toggle" type="button" data-sound-toggle aria-pressed="false">Activar sonido</button>
+    </header>
+
+    <main id="contenido" class="activity">
+      <section class="intro" aria-labelledby="titulo">
+        <p class="kicker">Ciencias Naturales · 3.º de primaria</p>
+        <h1 id="titulo">El ciclo de vida de la <em>mariposa monarca</em></h1>
+        <div class="instructions" id="instrucciones">
+          <h2>Instrucciones</h2>
+          <ol>
+            <li><span>Observa las cuatro tarjetas de la bandeja.</span></li>
+            <li><span>Arrástralas a los lugares del <strong>1 al 4</strong>, en el orden en que ocurren las etapas.</span></li>
+            <li><span>Cuando termines, presiona <strong>Comprobar</strong>.</span></li>
+          </ol>
+          <p class="key-help">
+            También puedes <strong>tocar</strong> una tarjeta y luego tocar el lugar. Con teclado: <kbd>Tab</kbd> para
+            moverte, <kbd>Enter</kbd> o <kbd>Espacio</kbd> para tomar y colocar, <kbd>Esc</kbd> para cancelar.
+          </p>
+        </div>
+      </section>
+
+      <section class="stage" aria-label="Actividad" data-board>
+        <div class="tray-wrap">
+          <p class="panel-label" id="bandeja-titulo">Bandeja <small>· tarjetas por acomodar</small></p>
+          <div class="tray zone" data-zone="tray" role="group" aria-labelledby="bandeja-titulo">
+            <button class="drop-btn" type="button" tabindex="-1"></button>
+            <span class="tray-empty">¡Bandeja vacía! Ya puedes comprobar.</span>
+            <div class="zone-items" data-tray></div>
+          </div>
+        </div>
+
+        <div>
+          <p class="panel-label" id="ciclo-titulo">El ciclo <small>· del 1 al 4</small></p>
+          <ol class="cycle" aria-labelledby="ciclo-titulo" data-slots></ol>
+          <p class="cycle-loop" aria-hidden="true">
+            <svg viewBox="0 0 40 24"><path d="M34 6 C 34 18, 6 18, 6 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M1 12 L6 6 L11 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            La mariposa pone huevos y el ciclo vuelve a empezar.
+          </p>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="button" data-check>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Comprobar
+          </button>
+          <button class="btn" type="button" data-reset>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v5h5" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Reiniciar
+          </button>
+          <span class="progress-note" data-progress aria-hidden="true"></span>
+        </div>
+
+        <div class="feedback" role="status" aria-live="polite" data-feedback hidden></div>
+
+        <div class="win-banner" data-win hidden>
+          <svg class="medal" viewBox="0 0 80 80" aria-hidden="true"><path d="M26 44 L16 76 L28 70 L34 80 L40 50 Z M54 44 L64 76 L52 70 L46 80 L40 50 Z" fill="#E8507A" stroke="#1F2A44" stroke-width="3" stroke-linejoin="round"/><circle cx="40" cy="32" r="26" fill="#FFFDF7" stroke="#1F2A44" stroke-width="3"/><circle cx="40" cy="32" r="19" fill="#F2701D" stroke="#1F2A44" stroke-width="3"/><path d="M40 20l3.6 7.4 8.1 1.2-5.9 5.7 1.4 8.1L40 38.6l-7.2 3.8 1.4-8.1-5.9-5.7 8.1-1.2z" fill="#FFC53D" stroke="#1F2A44" stroke-width="2" stroke-linejoin="round"/></svg>
+          <div>
+            <h2>¡Ciclo completo!</h2>
+            <p><strong>Dato curioso:</strong> cada otoño, millones de mariposas monarca viajan miles de kilómetros hasta los bosques de Michoacán y el Estado de México para pasar el invierno.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/js/ordenar.js"></script>
+  </body>
+</html>

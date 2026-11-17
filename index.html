@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Demo de actividades interactivas para primaria: ordenar, emparejar y opción múltiple. Funcionan en computadora, tablet y celular." />
+    <meta name="theme-color" content="#fbf6ea" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>Actividades interactivas · Demo</title>
+  </head>
+  <body class="home-page">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="topbar">
+      <span class="brand">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M31 33C26 20 14 12 9 17c-4 5 1 14 21 18zM33 33c5-13 17-21 22-16 4 5-1 14-21 18zM31 35c-11 0-17 8-13 15 4 6 11 0 13-13zM33 35c11 0 17 8 13 15-4 6-11 0-13-13z" fill="#F2701D" stroke="#1F2A44" stroke-width="4" stroke-linejoin="round"/><rect x="29.5" y="22" width="5" height="26" rx="2.5" fill="#1F2A44"/></svg></span>
+        <span class="brand-label">Actividades interactivas</span>
+      </span>
+      <span class="topbar-spacer"></span>
+      <button class="sound-toggle" type="button" data-sound-toggle aria-pressed="false">Activar sonido</button>
+    </header>
+
+    <main id="contenido" class="home">
+      <section class="hero" aria-labelledby="titulo">
+        <div class="hero-text">
+          <p class="sample-stamp">Contenido de ejemplo</p>
+          <h1 id="titulo">Actividades interactivas <span class="hero-dot">·</span> <span class="hero-demo">Demo</span></h1>
+          <p class="lead">
+            Tres actividades para primaria que se juegan arrastrando, uniendo y respondiendo.
+            Funcionan en computadora, tablet y celular, con el dedo, el mouse o el teclado.
+          </p>
+        </div>
+        <div class="hero-doodles" aria-hidden="true">
+          <svg class="doodle d1" viewBox="0 0 60 60"><path d="M30 6l6 16 17 1-13 11 4 17-14-9-14 9 4-17L7 23l17-1z" fill="#FFC53D" stroke="#1F2A44" stroke-width="3" stroke-linejoin="round"/></svg>
+          <svg class="doodle d2" viewBox="0 0 60 60"><circle cx="30" cy="30" r="20" fill="#14A3A3" stroke="#1F2A44" stroke-width="3"/><path d="M30 10 A20 20 0 0 1 50 30 L30 30 Z" fill="#FFFDF7" stroke="#1F2A44" stroke-width="3" stroke-linejoin="round"/></svg>
+          <svg class="doodle d3" viewBox="0 0 80 40"><path d="M4 30 C 14 6, 26 6, 32 20 S 52 36, 58 14 S 72 4, 76 12" fill="none" stroke="#E8507A" stroke-width="4" stroke-linecap="round"/></svg>
+          <svg class="doodle d4" viewBox="0 0 60 60"><circle cx="30" cy="30" r="13" fill="#3D6FE0" stroke="#1F2A44" stroke-width="3"/><ellipse cx="30" cy="30" rx="26" ry="8" fill="none" stroke="#1F2A44" stroke-width="3" transform="rotate(-18 30 30)"/></svg>
+        </div>
+      </section>
+
+      <ul class="act-list" data-cards>
+        <li class="act-card theme-monarca">
+          <a href="./ciclo-mariposa/">
+            <span class="act-cover" data-cover="mariposa"></span>
+            <span class="act-type"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16M7 20l-3-3M7 20l3-3M17 20V4M17 4l-3 3M17 4l3 3" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Ordenar arrastrando</span>
+            <h2>El ciclo de vida de la mariposa monarca</h2>
+            <span class="act-meta">Ciencias Naturales · 3.º de primaria</span>
+            <span class="act-desc">Acomoda las cuatro etapas en el orden correcto: del huevo a la mariposa adulta.</span>
+            <span class="act-go">Empezar <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </li>
+        <li class="act-card theme-fracciones">
+          <a href="./fracciones/">
+            <span class="act-cover" data-cover="fracciones"></span>
+            <span class="act-type"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="7" r="3" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="18" cy="17" r="3" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M9 8.5c4 0 4 7 6 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="2 3"/></svg>Emparejar conceptos</span>
+            <h2>¿Qué parte está coloreada?</h2>
+            <span class="act-meta">Matemáticas · 4.º de primaria</span>
+            <span class="act-desc">Une seis fracciones con las figuras que las representan.</span>
+            <span class="act-go">Empezar <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </li>
+        <li class="act-card theme-espacio">
+          <a href="./sistema-solar/">
+            <span class="act-cover is-night" data-cover="espacio"></span>
+            <span class="act-type"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="17" height="5" rx="2" fill="none" stroke="currentColor" stroke-width="2.4"/><rect x="3.5" y="13" width="17" height="5" rx="2" fill="currentColor" opacity=".35" stroke="currentColor" stroke-width="2.4"/><path d="M14 15.5l1.6 1.6 3-3" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Opción múltiple</span>
+            <h2>Viaje por el sistema solar</h2>
+            <span class="act-meta">Ciencias Naturales · 5.º de primaria</span>
+            <span class="act-desc">Seis preguntas con explicación inmediata de cada respuesta y puntaje final.</span>
+            <span class="act-go">Empezar <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </li>
+      </ul>
+
+      <section class="features" aria-labelledby="features-title">
+        <h2 id="features-title" class="sr-only">Características</h2>
+        <ul>
+          <li>
+            <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="8" y="3" width="16" height="26" rx="4" fill="#FFC53D" stroke="#1F2A44" stroke-width="2.6"/><circle cx="16" cy="24.5" r="1.6" fill="#1F2A44"/></svg>
+            <p><strong>Con el dedo o el mouse</strong>Se adapta a pizarrón digital, tablet, celular y computadora.</p>
+          </li>
+          <li>
+            <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="9" width="26" height="15" rx="3" fill="#14A3A3" stroke="#1F2A44" stroke-width="2.6"/><path d="M8 14h2M13 14h2M18 14h2M23 14h1M9 19h14" stroke="#1F2A44" stroke-width="2.4" stroke-linecap="round"/></svg>
+            <p><strong>Accesible</strong>Se puede usar solo con teclado y es compatible con lectores de pantalla.</p>
+          </li>
+          <li>
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 6h22v14H14l-6 6v-6H5z" fill="#E8507A" stroke="#1F2A44" stroke-width="2.6" stroke-linejoin="round"/><path d="M11 13l3 3 6-6" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p><strong>Retroalimentación al momento</strong>Cada respuesta explica por qué es correcta o no.</p>
+          </li>
+          <li>
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l3.6 8 8.4.8-6.3 5.6 1.9 8.3L16 21.4l-7.6 4.3 1.9-8.3L4 11.8l8.4-.8z" fill="#5BB35F" stroke="#1F2A44" stroke-width="2.6" stroke-linejoin="round"/></svg>
+            <p><strong>Ligeras y sin instalar</strong>Se abren en el navegador y cargan rápido, incluso con internet escolar.</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="home-footer">
+      <p>Demo de portafolio. Textos e ilustraciones originales, creados como contenido de ejemplo.</p>
+    </footer>
+
+    <script type="module" src="/src/js/index.js"></script>
+  </body>
+</html>

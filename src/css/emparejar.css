@@ -1,0 +1,254 @@
+.frac {
+  display: inline-grid;
+  justify-items: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1;
+  font-size: 2rem;
+  color: var(--ink);
+}
+.frac .num {
+  padding: 0 8px 4px;
+  border-bottom: 4px solid currentColor;
+  border-radius: 2px;
+}
+.frac .den {
+  padding-top: 4px;
+}
+
+.frac-card {
+  width: 100px;
+  height: 96px;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 3px;
+  padding: 4px;
+}
+.frac-card:nth-child(3n + 1) {
+  rotate: -2deg;
+}
+.frac-card:nth-child(3n + 2) {
+  rotate: 1.5deg;
+}
+.frac-card:nth-child(3n) {
+  rotate: -0.5deg;
+}
+.figure .frac-card {
+  rotate: 0deg;
+}
+.frac-word {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-deep);
+}
+
+.tray .zone-items {
+  min-height: 96px;
+  gap: 12px;
+}
+
+.figures {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px 20px;
+}
+
+.figure {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  padding: 12px 14px 12px;
+  border-radius: 22px;
+  border: 3px solid var(--ink);
+  background: var(--white);
+  box-shadow: var(--shadow);
+  transition: background-color 0.2s, border-color 0.2s;
+}
+.figure:nth-child(odd) {
+  rotate: -0.6deg;
+}
+.figure:nth-child(even) {
+  rotate: 0.8deg;
+}
+.figure.is-over {
+  background: var(--accent-soft);
+  border-style: solid;
+  border-color: var(--ink);
+  box-shadow: 0 0 0 5px var(--accent), var(--shadow);
+}
+.has-selection .figure {
+  border-color: var(--ink);
+  box-shadow: 0 0 0 3px var(--accent-soft), var(--shadow);
+}
+
+.fig-letter {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1rem;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: var(--accent-soft);
+  border: 2px solid var(--ink);
+}
+.fig-art {
+  width: 104px;
+  height: 104px;
+  display: block;
+}
+.fig-art svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* El lugar para soltar se dibuja con .pocket; la tarjeta se coloca encima con .zone-items */
+.pocket,
+.figure .zone-items {
+  grid-row: 2;
+  grid-column: 1;
+  width: 112px;
+  height: 106px;
+  margin-top: 8px;
+}
+.pocket {
+  border: 3px dashed var(--accent);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--accent-soft) 55%, transparent);
+  display: grid;
+  place-items: center;
+}
+.pocket-ghost {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--accent-deep);
+}
+.figure .zone-items {
+  display: grid;
+  place-items: center;
+}
+.figure.is-filled .pocket {
+  border-color: transparent;
+  background: transparent;
+}
+.figure.is-filled .pocket-ghost {
+  visibility: hidden;
+}
+.figure[data-result='ok'] {
+  border-color: var(--ok);
+  background: #f1fbf5;
+}
+.figure[data-result='err'] {
+  border-color: var(--err);
+  background: #fff6f4;
+}
+.figure[data-result='ok'] .fig-letter {
+  background: var(--ok);
+  color: #fff;
+}
+.figure[data-result='err'] .fig-letter {
+  background: var(--err);
+  color: #fff;
+}
+.is-complete .figure .fig-art {
+  animation: spin-pop 0.7s cubic-bezier(0.3, 0.8, 0.3, 1.2) both;
+}
+.is-complete .figure:nth-child(2) .fig-art { animation-delay: 0.06s; }
+.is-complete .figure:nth-child(3) .fig-art { animation-delay: 0.12s; }
+.is-complete .figure:nth-child(4) .fig-art { animation-delay: 0.18s; }
+.is-complete .figure:nth-child(5) .fig-art { animation-delay: 0.24s; }
+.is-complete .figure:nth-child(6) .fig-art { animation-delay: 0.3s; }
+@keyframes spin-pop {
+  50% {
+    scale: 1.12;
+    rotate: 8deg;
+  }
+  100% {
+    scale: 1;
+    rotate: 0deg;
+  }
+}
+
+.reminder {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+  border: 3px solid var(--ink);
+  rotate: 1deg;
+  font-size: 0.95rem;
+}
+.frac.big {
+  font-size: 2.4rem;
+  color: var(--accent-deep);
+}
+
+@media (max-width: 1100px) and (min-width: 901px) {
+  .figures {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .figures {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 12px;
+  }
+  .figure {
+    padding: 12px 8px 10px;
+  }
+  .fig-art {
+    width: 100px;
+    height: 100px;
+  }
+  .frac-card {
+    width: 96px;
+    height: 92px;
+  }
+  .frac-card .frac {
+    font-size: 1.5rem;
+  }
+  .frac-word {
+    font-size: 0.78rem;
+  }
+  .pocket,
+  .figure .zone-items {
+    width: 106px;
+    height: 102px;
+  }
+  .tray {
+    padding: 12px 8px;
+  }
+  .tray .zone-items {
+    gap: 12px 10px;
+    min-height: 92px;
+  }
+}
+
+.frac-card .frac {
+  font-size: 1.6rem;
+}
+.frac-card .frac .num {
+  padding-bottom: 3px;
+  border-bottom-width: 3.5px;
+}
+.frac-card .frac .den {
+  padding-top: 3px;
+}
+@media (max-width: 560px) {
+  .frac-card .frac {
+    font-size: 1.45rem;
+  }
+}

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Actividad interactiva: preguntas de opción múltiple sobre el sistema solar con retroalimentación inmediata." />
+    <meta name="theme-color" content="#fbf6ea" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>Viaje por el sistema solar · Actividades interactivas</title>
+  </head>
+  <body class="theme-espacio">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="topbar">
+      <a class="brand" href="../" aria-label="Volver a todas las actividades">
+        <span class="brand-mark"><svg class="back-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5L8 12l6.5 6.5" fill="none" stroke="#1F2A44" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand-label">Todas las actividades</span>
+      </a>
+      <span class="topbar-spacer"></span>
+      <span class="sample-tag">Contenido de ejemplo</span>
+      <button class="sound-toggle" type="button" data-sound-toggle aria-pressed="false">Activar sonido</button>
+    </header>
+
+    <main id="contenido" class="activity">
+      <section class="intro" aria-labelledby="titulo">
+        <p class="kicker">Ciencias Naturales · 5.º de primaria</p>
+        <h1 id="titulo">Viaje por el <em>sistema solar</em></h1>
+        <div class="instructions" id="instrucciones">
+          <h2>Instrucciones</h2>
+          <ol>
+            <li><span>Lee la pregunta y elige la respuesta que creas correcta.</span></li>
+            <li><span>Presiona <strong>Comprobar</strong> para saber si acertaste y por qué.</span></li>
+            <li><span>Avanza con <strong>Siguiente</strong>. Al final verás tu puntaje.</span></li>
+          </ol>
+          <p class="key-help">
+            Con teclado: usa las <kbd>flechas</kbd> para elegir una opción y <kbd>Enter</kbd> para comprobar y avanzar.
+          </p>
+        </div>
+      </section>
+
+      <section class="stage" aria-label="Actividad">
+        <div class="quiz-card" data-quiz>
+          <div class="quiz-sky" data-art aria-hidden="true"></div>
+          <div class="quiz-body">
+            <div class="quiz-progress">
+              <p class="quiz-count" data-count></p>
+              <ol class="quiz-dots" data-dots aria-hidden="true"></ol>
+            </div>
+
+            <form class="quiz-form" data-form novalidate>
+              <fieldset>
+                <legend class="quiz-question" data-question tabindex="-1"></legend>
+                <div class="quiz-options" data-options></div>
+              </fieldset>
+
+              <div class="feedback" role="status" aria-live="polite" data-feedback hidden></div>
+
+              <div class="actions">
+                <button class="btn btn-primary" type="submit" data-primary>Comprobar</button>
+                <button class="btn" type="button" data-reset>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v5h5" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Reiniciar
+                </button>
+              </div>
+            </form>
+
+            <div class="quiz-results" data-results hidden>
+              <svg class="medal" viewBox="0 0 80 80" aria-hidden="true"><path d="M26 44 L16 76 L28 70 L34 80 L40 50 Z M54 44 L64 76 L52 70 L46 80 L40 50 Z" fill="#E8507A" stroke="#1F2A44" stroke-width="3" stroke-linejoin="round"/><circle cx="40" cy="32" r="26" fill="#FFFDF7" stroke="#1F2A44" stroke-width="3"/><circle cx="40" cy="32" r="19" fill="#3D55C8" stroke="#1F2A44" stroke-width="3"/><path d="M40 20l3.6 7.4 8.1 1.2-5.9 5.7 1.4 8.1L40 38.6l-7.2 3.8 1.4-8.1-5.9-5.7 8.1-1.2z" fill="#FFC53D" stroke="#1F2A44" stroke-width="2" stroke-linejoin="round"/></svg>
+              <h2 class="results-title" data-results-title tabindex="-1"></h2>
+              <p class="results-stars" data-stars></p>
+              <p class="results-msg" data-results-msg></p>
+              <ol class="results-list" data-results-list></ol>
+              <button class="btn btn-primary" type="button" data-retry>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v5h5" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Reintentar
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/js/quiz.js"></script>
+  </body>
+</html>
